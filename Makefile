@@ -8,8 +8,17 @@
 ## Last update Mon Oct 17 11:11:10 2016 ratouney ratouney
 ##
 
-SRC	=	main.c		\
-		my_strpaste.c
+SRC	=	calib_add.c			\
+		calib_copy.c		\
+		calib_rem.c			\
+		calib_show.c		\
+		calib_write.c		\
+		charray.c			\
+		destroy_charray.c	\
+		fillgen.c			\
+		newcharray.c		\
+		calib_char.c		\
+		calib_nbr.c
 
 OBJ	=	$(SRC:.c=.o)
 

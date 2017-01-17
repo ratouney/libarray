@@ -8,14 +8,24 @@
 ** Last update Wed Nov 30 18:19:49 2016 ratouney
 */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
+#ifndef RAT_ARRAY_H_
+# define RAT_ARRAY_H_
 
-#define LA_SN 0
-#define LA_SF 1
-#define LA_BN 10
-#define LA_BF 11
+# include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
+
+# define LA_SN 0
+# define LA_SF 1
+# define LA_BN 10
+# define LA_BF 11
+
+# define la_write(x, y, z, a) calib_write(x, y, z, a)
+# define la_rem(x, y, z, a) y = calib_rem(x, z, a)
+# define la_add(x, y, z, a, b) y = calib_add(x, z, a, b)
+# define la_copy(x, y) y = calib_copy(x)
+# define la_free(x) destroy_charray(x)
+# define la_show(x) calib_show(x)
 
 struct s_charray;
 
@@ -28,21 +38,17 @@ struct s_charray
     int size;
 };
 
-char *my_strpaste(char *,int);
+void calib_char(char c);
+int calib_nbr(int a);
+char *stp(char *,int);
+char *fillgen(int size);
+char **charray(int size);
+t_charray *newcharray(int size);
+void destroy_charray(t_charray *data);
+void calib_write(t_charray *array, char *str, int spot, int mode);
+void calib_show(t_charray *data);
+t_charray *calib_add(t_charray *data, char *str, int pos, int mode);
+t_charray *calib_rem(t_charray *data, int pos, int mode);
+t_charray *calib_copy(t_charray *data);
 
-struct s_string;
-
-typedef struct s_string t_string;
-
-struct s_string
-{
-    char *string;
-
-    int (*len)(t_string *);
-    int (*exist)(t_string *, char );
-    int (*cmp)(t_string *, char *, int);
-    char *(*copy)(t_string *, int);
-    char *(*fuse)(t_string *, char *, int);
-    char *(*sl)(t_string *, int, int);
-    void (*show)(t_string *, int);
-};
+#endif  /* !RAT_ARRAY_H_ */

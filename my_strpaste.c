@@ -10,11 +10,13 @@
 
 #include "ratarray.h"
 
-char *my_strpaste(char *str, int mode)
+char *stp(char *str, int mode)
 {
     int count;
     char *new;
 
+    if (str == NULL)
+        return (NULL);
     new = malloc(sizeof(char) * (strlen(str) + 1));
     count = -1;
     while (str[++count] != '\0')
