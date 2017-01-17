@@ -26,6 +26,7 @@
 # define la_copy(x, y) y = calib_copy(x)
 # define la_free(x) destroy_charray(x)
 # define la_show(x) calib_show(x)
+# define la_imp(x, y) y = calib_import(x)
 
 struct s_charray;
 
@@ -50,5 +51,6 @@ void calib_show(t_charray *data);
 t_charray *calib_add(t_charray *data, char *str, int pos, int mode);
 t_charray *calib_rem(t_charray *data, int pos, int mode);
 t_charray *calib_copy(t_charray *data);
+t_charray *calib_import(char **data, int given);
 
 #endif  /* !RAT_ARRAY_H_ */

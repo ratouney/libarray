@@ -18,6 +18,21 @@ Creation of an Array :
         Returns a structure with the array (and some other stuff)
 
 
+Import existing [Char **] :
+
+    [Function]
+        t_charray *calib_import(char **tab, int size)
+    [MACRO]
+        la_imp(tab, size)
+
+    [Tab]
+        Existing array to Import
+    
+    [Size]
+        Size of the array, if unknown, set it to -1 and it will parse
+        up to the first NULL string.
+
+
 Add content to the array :
 
     [Function]

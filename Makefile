@@ -18,7 +18,8 @@ SRC	=	calib_add.c			\
 		fillgen.c			\
 		newcharray.c		\
 		calib_char.c		\
-		calib_nbr.c
+		calib_nbr.c			\
+		calib_import.c
 
 OBJ	=	$(SRC:.c=.o)
 

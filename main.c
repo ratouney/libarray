@@ -11,8 +11,11 @@
 #include <stdio.h>
 #include "ratarray.h"
 
-int main(int argc, char **argv)
+int main(int argc, char **argv, char **env)
 {
+    t_charray *newenv = calib_import(env, -1);
+    exit(42);
+
     t_charray *data = newcharray(5);
     t_charray *other;
 
