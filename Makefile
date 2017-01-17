@@ -19,7 +19,8 @@ SRC	=	calib_add.c			\
 		newcharray.c		\
 		calib_char.c		\
 		calib_nbr.c			\
-		calib_import.c
+		calib_import.c		\
+		calib_export.c
 
 OBJ	=	$(SRC:.c=.o)
 

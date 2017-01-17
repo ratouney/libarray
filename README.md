@@ -32,6 +32,26 @@ Import existing [Char **] :
         Size of the array, if unknown, set it to -1 and it will parse
         up to the first NULL string.
 
+    [RETURN]
+        A structure with the given array
+
+
+Export to [Char **] ;
+
+    [Function]
+        char **calib_export(t_charray *data, int mode)
+    [MACRO]
+        la_exp(data, mode)
+        
+    [Data]
+        Array structure with desired content
+    
+    [Mode]
+        Free's the given strucute upon Export
+    
+    [RETURN]
+        The array contained in the structure
+
 
 Add content to the array :
 
