@@ -29,13 +29,12 @@ t_charray *calib_import(char **data, int given)
     new = malloc(sizeof(t_charray));
     new->data = charray(size);
     new->fill = fillgen(size);
-    new->size = size + (i = -1) * 0;
-    while (++i < size)
+    new->size = size;
+    i = 0;
+    while (i < size)
     {
-        if (data[i] == NULL)
-            new->data[i] = NULL + (new->fill[i] = '0') * 0;
-        else
-            new->data[i] = stp(data[i], 0) + (new->fill[i] = '1') * 0;
+        new->data[i] = stp(data[i], 0) + (new->fill[i] = '1') * 0;
+        i++;
     }
     return (new);
 }

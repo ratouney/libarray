@@ -23,7 +23,7 @@ t_charray *calib_add_inter(t_charray *data, char **new, char *nf)
     return (newdata);
 }
 
-t_charray *calib_add(t_charray *data, char *str, int pos, int mode)
+t_charray *calib_add_mid(t_charray *data, char *str, int pos)
 {
     char **new = charray(data->size + 1);
     char *nf = fillgen(data->size + 1);
@@ -49,4 +49,35 @@ t_charray *calib_add(t_charray *data, char *str, int pos, int mode)
             new[i + mod] = NULL + (nf[i + mod] = '0') * 0;
     }
     return (calib_add_inter(data, new, nf));
+}
+
+t_charray *calib_add_end(t_charray *data, char *str)
+{
+    char **new;
+    char *nf;
+    int i;
+
+    new = charray(data->size + 1);
+    nf = fillgen(data->size + 1);
+    i = -1;
+    while (++i < data->size)
+    {
+        if (data->fill[i] == '1')
+            new[i] = stp(data->data[i], 0) + (nf[i] = '1') * 0;
+        else
+            new[i] = NULL + (nf[i] = '0') * 0;
+    }
+    if (str == NULL)
+        new[i] = NULL + (nf[i] = '0') * 0;
+    else
+        new[i] = stp(str, 0) + (nf[i] = '1') * 0;
+    return (calib_add_inter(data, new, nf));
+}
+
+t_charray *calib_add(t_charray *data, char *str, int pos, int mode)
+{
+    if (pos >= 0)
+        return (calib_add_mid(data, str, pos));
+    if (pos == -1)
+        return (calib_add_end(data, str));
 }

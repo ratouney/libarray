@@ -20,7 +20,8 @@ SRC	=	calib_add.c			\
 		calib_char.c		\
 		calib_nbr.c			\
 		calib_import.c		\
-		calib_export.c
+		calib_export.c		\
+		my_strpaste.c
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -31,14 +32,14 @@ HEADER	=	ratstr.h
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	ar rc $(NAME) $(OBJ)
-	make clean
+	@ar rc $(NAME) $(OBJ)
+	@make clean
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean:	clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 test:
 	gcc -g *.c
