@@ -11,20 +11,41 @@
 #include <stdio.h>
 #include "ratarray.h"
 
+int calib_strlen(char *str)
+{
+    int count;
+
+    count = 0;
+    while (str[count] != '\0')
+        count++;
+    return (count);
+}
+
 void calib_show(t_charray *data)
 {
     int i;
 
     i = 0;
-    printf("[Content of Charray]\n");
-    printf("Status : [%s]\n\n", data->fill);
+    write(2, "[Content of Charray]\nStatus : [", 31);
+    write(2, data->fill, calib_strlen(data->fill));
+    write(2, "\n\n", 2);
     while (i < data->size)
     {
         if (data->fill[i] == '1')
-            printf("\t[%d] = [%s]\n", i, data->data[i]);
+        {
+            write(2, "\t[", 2);
+            calib_nbr(i);
+            write(2, "] = [", 5);
+            write(2, data->data[i], calib_strlen(data->data[i]));
+            write(2, "]\n", 2);
+        }
         else
-            printf("\t[%d] = Undefined\n", i);
+        {
+            write(2, "\t[", 2);
+            calib_nbr(i);
+            write(2, "] = Undefined\n", 14);
+        }
         i++;
     }
-    printf("[End of Array]\n");
+    write(2, "[End of Array]\n", 14);
 }
