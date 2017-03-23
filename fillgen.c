@@ -5,24 +5,25 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Wed Nov 30 18:19:49 2016 ratouney
+** Last update Thu Mar 23 21:10:36 2017 
 */
 
 #include <stdio.h>
 #include "ratarray.h"
 
-char *fillgen(int size)
+char	*fillgen(int size)
 {
-    char *new;
-    int i;
+  char	*new;
+  int	i;
 
-    i = 0;
-    new = malloc(sizeof(char) * (size + 1));
-    while (i < size)
+  i = 0;
+  if ((new = malloc(sizeof(char) * (size + 1))) == NULL)
+    return (NULL);
+  while (i < size)
     {
-        new[i] = '0';
-        i++;
+      new[i] = '0';
+      i++;
     }
-    new[i] = '\0';
-    return (new);
+  new[i] = '\0';
+  return (new);
 }

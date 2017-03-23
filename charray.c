@@ -5,17 +5,17 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Wed Nov 30 18:19:49 2016 ratouney
+** Last update Thu Mar 23 21:09:15 2017 
 */
 
-#include <stdio.h>
 #include "ratarray.h"
 
-char **charray(int size)
+char	**charray(int size)
 {
-    char **new;
+  char	**new;
 
-    new = malloc(sizeof(char *) * (size + 1));
-    new[size] = NULL;
-    return (new);
+  if ((new = malloc(sizeof(char *) * (size + 1))) == NULL)
+    return (NULL);
+  new[size] = NULL;
+  return (new);
 }

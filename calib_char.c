@@ -5,12 +5,12 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Sun Dec 11 09:59:08 2016 ratouney
-** Last update Sun Dec 11 11:45:49 2016 John Doe
+** Last update Thu Mar 23 21:02:04 2017 
 */
 
 #include "ratarray.h"
 
-void calib_char(char c)
+void	calib_char(char c)
 {
-    write(2, &c, 1);
+  write(2, &c, 1);
 }

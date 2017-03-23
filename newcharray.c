@@ -5,19 +5,30 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Wed Nov 30 18:19:49 2016 ratouney
+** Last update Thu Mar 23 21:14:17 2017 
 */
 
 #include <stdio.h>
 #include "ratarray.h"
 
-t_charray *newcharray(int size)
+t_charray	*newcharray(int size)
 {
-    t_charray *new;
+  t_charray	*new;
+  int		count;
 
-    new = malloc(sizeof(t_charray));
-    new->data = charray(size);
-    new->fill = fillgen(size);
-    new->size = size;
-    return (new);
+  if ((new = malloc(sizeof(t_charray))) == NULL)
+    return (NULL);
+  if ((new->data = charray(size)) == NULL)
+    {
+      free(new);
+      return (NULL);
+    }
+  if ((new->fill = fillgen(size)) == NULL)
+    {
+      free(new->data);
+      free(new);
+      return (NULL);
+    }
+  new->size = size;
+  return (new);
 }
