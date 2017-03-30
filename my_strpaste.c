@@ -8,7 +8,7 @@
 ** Last update Thu Mar 23 21:11:04 2017 
 */
 
-#include "ratarray.h"
+#include "calib.h"
 
 char	*stp(char *str, int mode)
 {

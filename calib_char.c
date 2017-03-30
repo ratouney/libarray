@@ -8,7 +8,7 @@
 ** Last update Thu Mar 23 21:02:04 2017 
 */
 
-#include "ratarray.h"
+#include "calib.h"
 
 void	calib_char(char c)
 {

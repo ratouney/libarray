@@ -9,7 +9,7 @@
 */
 
 #include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 void	destroy_charray(t_charray *data)
 {

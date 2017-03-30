@@ -8,7 +8,7 @@
 ** Last update Thu Mar 23 21:03:32 2017 
 */
 
-#include "ratarray.h"
+#include "calib.h"
 
 char	**calib_export(t_charray *data, int mode)
 {

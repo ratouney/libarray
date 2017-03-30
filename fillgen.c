@@ -9,7 +9,7 @@
 */
 
 #include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 char	*fillgen(int size)
 {

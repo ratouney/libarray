@@ -8,9 +8,9 @@
 ** Last update Sun Dec 11 11:45:49 2016 John Doe
 */
 
-#include "ratarray.h"
+#include "calib.h"
 
-int	rec_calib_nbr(int nb)
+void	rec_calib_nbr(int nb)
 {
   if (nb <= 9)
     {
@@ -23,7 +23,7 @@ int	rec_calib_nbr(int nb)
     }
 }
 
-int	calib_nbr(int nb)
+void	calib_nbr(int nb)
 {
   if (nb < 0)
     {

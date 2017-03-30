@@ -9,7 +9,7 @@
 */
 
 #include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 t_charray	*calib_rem_inter(t_charray *data, char **new, char *nf)
 {
@@ -32,6 +32,7 @@ t_charray	*calib_rem(t_charray *data, int pos, int mode)
   int		mod;
 
   new = charray(data->size - 1);
+  mode = mode;
   nf = fillgen(data->size - 1);
   i = -1;
   mod = 0;

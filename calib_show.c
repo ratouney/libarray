@@ -9,7 +9,7 @@
 */
 
 #include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 int	calib_strlen(char *str)
 {
@@ -28,7 +28,7 @@ void	calib_show(t_charray *data)
   i = 0;
   write(2, "[Content of Charray]\nStatus : [", 31);
   write(2, data->fill, calib_strlen(data->fill));
-  write(2, "\n\n", 2);
+  write(2, "]\n\n", 3);
   while (i < data->size)
     {
       if (data->fill[i] == '1')
@@ -47,5 +47,5 @@ void	calib_show(t_charray *data)
         }
       i++;
     }
-  write(2, "[End of Array]\n", 14);
+  write(2, "[End of Array]\n", 15);
 }

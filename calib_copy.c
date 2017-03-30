@@ -8,8 +8,7 @@
 ** Last update Thu Mar 23 21:02:43 2017 
 */
 
-#include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 t_charray	*calib_copy(t_charray *data)
 {

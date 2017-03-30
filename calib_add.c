@@ -5,11 +5,10 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 23 21:15:12 2017 
+** Last update Thu Mar 30 17:58:14 2017 
 */
 
-#include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 t_charray	*calib_add_inter(t_charray *data, char **new, char *nf)
 {
@@ -78,8 +77,10 @@ t_charray	*calib_add_end(t_charray *data, char *str)
 
 t_charray	*calib_add(t_charray *data, char *str, int pos, int mode)
 {
+  mode = mode;
   if (pos >= 0)
     return (calib_add_mid(data, str, pos));
   if (pos == -1)
     return (calib_add_end(data, str));
+  return (NULL);
 }

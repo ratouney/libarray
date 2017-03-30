@@ -9,7 +9,7 @@
 */
 
 #include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 t_charray	*calib_import(char **data, int given)
 {

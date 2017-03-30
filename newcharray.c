@@ -9,12 +9,11 @@
 */
 
 #include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 t_charray	*newcharray(int size)
 {
   t_charray	*new;
-  int		count;
 
   if ((new = malloc(sizeof(t_charray))) == NULL)
     return (NULL);

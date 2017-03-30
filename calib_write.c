@@ -9,7 +9,7 @@
 */
 
 #include <stdio.h>
-#include "ratarray.h"
+#include "calib.h"
 
 void	calib_write(t_charray *array, char *str, int spot, int mode)
 {

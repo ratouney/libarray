@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ## 
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Mon Oct 17 11:11:10 2016 ratouney ratouney
+## Last update Thu Mar 30 17:57:20 2017 
 ##
 
 SRC	=	calib_add.c			\
@@ -21,13 +21,16 @@ SRC	=	calib_add.c			\
 		calib_nbr.c			\
 		calib_import.c		\
 		calib_export.c		\
-		my_strpaste.c
+		my_strpaste.c		\
+		calib_fromstr.c
 
 OBJ	=	$(SRC:.c=.o)
 
 NAME	=	libratarray.a
 
-HEADER	=	ratstr.h
+HEADER	=	calib.h
+
+CFLAGS	+=	-W -Wall -Wextra
 
 all:	$(NAME)
 
