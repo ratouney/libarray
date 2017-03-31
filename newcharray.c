@@ -5,10 +5,10 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 23 21:14:17 2017 
+** Last update Fri Mar 31 10:03:07 2017 
 */
 
-#include <stdio.h>
+#include <stdlib.h>
 #include "calib.h"
 
 t_charray	*newcharray(int size)

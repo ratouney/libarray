@@ -5,9 +5,11 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 23 21:02:43 2017 
+** Last update Fri Mar 31 09:59:57 2017 
 */
 
+#include <stdlib.h>
+#include <unistd.h>
 #include "calib.h"
 
 t_charray	*calib_copy(t_charray *data)

@@ -5,10 +5,10 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 23 21:06:00 2017 
+** Last update Fri Mar 31 10:00:16 2017 
 */
 
-#include <stdio.h>
+#include <stdlib.h>
 #include "calib.h"
 
 t_charray	*calib_rem_inter(t_charray *data, char **new, char *nf)

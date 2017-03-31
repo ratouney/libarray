@@ -5,9 +5,10 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 23 21:09:15 2017 
+** Last update Fri Mar 31 10:00:27 2017 
 */
 
+#include <stdlib.h>
 #include "calib.h"
 
 char	**charray(int size)

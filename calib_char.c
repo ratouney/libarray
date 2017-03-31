@@ -5,9 +5,10 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Sun Dec 11 09:59:08 2016 ratouney
-** Last update Thu Mar 23 21:02:04 2017 
+** Last update Fri Mar 31 10:03:20 2017 
 */
 
+#include <unistd.h>
 #include "calib.h"
 
 void	calib_char(char c)

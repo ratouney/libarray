@@ -5,9 +5,11 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 30 17:58:14 2017 
+** Last update Fri Mar 31 09:59:38 2017 
 */
 
+#include <unistd.h>
+#include <stdlib.h>
 #include "calib.h"
 
 t_charray	*calib_add_inter(t_charray *data, char **new, char *nf)

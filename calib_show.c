@@ -5,10 +5,10 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 23 21:06:42 2017 
+** Last update Fri Mar 31 10:02:57 2017 
 */
 
-#include <stdio.h>
+#include <unistd.h>
 #include "calib.h"
 
 int	calib_strlen(char *str)

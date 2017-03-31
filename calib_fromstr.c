@@ -5,9 +5,11 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Tue Mar 28 18:46:11 2017 
+** Last update Fri Mar 31 10:01:35 2017 
 */
 
+#include <stdlib.h>
+#include <unistd.h>
 #include "calib.h"
 
 char	*calib_stcl(char *str, int from, int to, int mode)
